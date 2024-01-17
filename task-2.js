@@ -1,12 +1,13 @@
 function formatMessage(message, maxLength) {
-    if(message.length <= maxLength){
-        return message;
-    }else if (message.length > maxLength) {
+    if (message.length > maxLength) {
         const modifiMessage = message.slice(0, maxLength);
        const addPointsInMessage = modifiMessage.padEnd(3, '...');
        return addPointsInMessage;
+    }else {
+            return message;
+        }
     }
-}
+
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); 
 console.log(formatMessage("Curabitur ligula sapien", 23));
