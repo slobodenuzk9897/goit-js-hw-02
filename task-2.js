@@ -1,7 +1,7 @@
 function formatMessage(message, maxLength) {
     if (message.length > maxLength) {
         const modifiMessage = message.slice(0, maxLength);
-       const addPointsInMessage = modifiMessage.padEnd(3, '...');
+       const addPointsInMessage = modifiMessage.padEnd(maxLength, '...');
        return addPointsInMessage;
     }else {
             return message;
